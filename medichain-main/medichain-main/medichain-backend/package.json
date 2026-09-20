@@ -1,0 +1,51 @@
+{
+  "name": "medichain-backend",
+  "version": "1.0.0",
+  "description": "MediChain blockchain backend with smart contracts and Express server",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "test:coverage": "hardhat coverage",
+    "deploy:local": "hardhat run scripts/deploy-shield.js --network localhost",
+    "deploy:amoy": "hardhat run scripts/deploy-shield.js --network amoy",
+    "node": "hardhat node",
+    "server": "node server/index.js",
+    "server:dev": "nodemon server/index.js",
+    "attack:stolen-cid": "hardhat test test/attacks/stolen-cid.test.js",
+    "attack:expired-grant": "hardhat test test/attacks/expired-grant.test.js",
+    "attack:replay": "hardhat test test/attacks/replay.test.js",
+    "attack:forged-grant": "hardhat test test/attacks/forged-grant.test.js",
+    "attack:injection": "hardhat test test/attacks/injection.test.js",
+    "attack:all": "npm run attack:stolen-cid && npm run attack:expired-grant && npm run attack:replay && npm run attack:forged-grant && npm run attack:injection"
+  },
+  "keywords": [
+    "blockchain",
+    "medical-records",
+    "ethereum",
+    "hardhat",
+    "solidity"
+  ],
+  "author": "MediChain",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
+    "@nomicfoundation/hardhat-ethers": "^3.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@typechain/ethers-v6": "^0.5.0",
+    "@typechain/hardhat": "^9.0.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "chai": "^4.2.0",
+    "hardhat": "^2.22.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "nodemon": "^3.0.0",
+    "solidity-coverage": "^0.8.0",
+    "typechain": "^8.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ethers": "^6.13.0"
+  }
+}
