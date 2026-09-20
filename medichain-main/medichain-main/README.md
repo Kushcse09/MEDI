@@ -1,33 +1,35 @@
-# 🏥 MediChain - Blockchain Medical Records with Zero-Knowledge Encryption
+# MediChain - Blockchain Medical Records with Zero-Knowledge Encryption
 
 > **Patient-owned, blockchain-verified medical records with enterprise-grade security**
+
+**Live demo:** [https://medichain-main-ivory.vercel.app/](https://medichain-main-ivory.vercel.app/)
 
 Complete Web3 healthcare platform with **MediChain Shield** - zero-cost, privacy-first security layer featuring client-side encryption, smart contract access control, AI guard, and proven attack resistance.
 
 ---
 
-## 🎯 Overview
+## Overview
 
 MediChain is a decentralized medical record management system that puts patients in complete control of their healthcare data. Using blockchain technology, IPFS storage, and Web3 wallet authentication, patients can securely store, share, and revoke access to their medical records.
 
-### 🛡️ MediChain Shield Security Layer
+### MediChain Shield Security Layer
 
 **NEW**: Enterprise-grade security without modifying a single UI component:
 
-- ✅ **Client-Side Encryption** - AES-256-GCM with HKDF key derivation
-- ✅ **Zero-Knowledge Architecture** - Server never sees plaintext or private keys
-- ✅ **Time-Bounded Access** - Automatic grant expiration (max 90 days)
-- ✅ **EIP-712 Signatures** - Replay attack protection with nonce tracking
-- ✅ **AI Prompt Injection Defense** - 3-layer protection, zero LLM tokens on attacks
-- ✅ **Multi-Tier Rate Limiting** - IP, wallet, and endpoint-specific limits
-- ✅ **Immutable Audit Trail** - On-chain access logging
-- ✅ **Attack-Tested** - 5/5 attack scenarios blocked (see demos)
+- **Client-Side Encryption** - AES-256-GCM with HKDF key derivation
+- **Zero-Knowledge Architecture** - Server never sees plaintext or private keys
+- **Time-Bounded Access** - Automatic grant expiration (max 90 days)
+- **EIP-712 Signatures** - Replay attack protection with nonce tracking
+- **AI Prompt Injection Defense** - 3-layer protection, zero LLM tokens on attacks
+- **Multi-Tier Rate Limiting** - IP, wallet, and endpoint-specific limits
+- **Immutable Audit Trail** - On-chain access logging
+- **Attack-Tested** - 5/5 attack scenarios blocked (see demos)
 
 **Cost**: $0 (free-tier LLMs, local IPFS, testnet gas)
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -105,7 +107,7 @@ Navigate to **http://localhost:3000** and connect MetaMask!
 
 ---
 
-## 🧪 Verify Installation
+## Verify Installation
 
 ### Run All Tests
 
@@ -125,15 +127,15 @@ npm test test/ai-guard.test.js
 npm run attack:all
 ```
 
-**Expected**: 131+ tests passing, all attacks blocked ✅
+**Expected**: 131+ tests passing, all attacks blocked
 
 ---
 
-## 📖 Documentation
+## Documentation
 
 ### Essential Docs
 
-1. **[MEDICHAIN-SHIELD-COMPLETE.md](MEDICHAIN-SHIELD-COMPLETE.md)** ⭐ - Complete Shield implementation guide
+1. **[MEDICHAIN-SHIELD-COMPLETE.md](MEDICHAIN-SHIELD-COMPLETE.md)** - Complete Shield implementation guide
    - All 6 phases overview
    - Architecture and security guarantees
    - File structure and API reference
@@ -153,7 +155,7 @@ npm run attack:all
 
 ---
 
-## 🎬 Attack Demonstrations
+## Attack Demonstrations
 
 **Prove the security works:**
 
@@ -171,13 +173,13 @@ npm run attack:forged-grant    # Only owner can grant access
 npm run attack:injection       # Prompt injection quarantined
 ```
 
-**Expected**: All attacks BLOCKED with detailed console output ✅
+**Expected**: All attacks BLOCKED with detailed console output
 
 See **[RUN-DEMOS.md](RUN-DEMOS.md)** for detailed guide.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Medichain/
@@ -271,7 +273,7 @@ Medichain/
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend
 - **Next.js 16** with App Router
@@ -312,7 +314,7 @@ Medichain/
 
 ---
 
-## 🔐 Security Architecture
+## Security Architecture
 
 ### Zero-Knowledge Flow
 
@@ -337,30 +339,30 @@ Medichain/
 
 ### Security Guarantees
 
-✅ **Client-Side Encryption** - Plaintext never leaves user's browser  
-✅ **Key Derivation** - HKDF-SHA256 from wallet signatures  
-✅ **Authenticated Encryption** - AES-256-GCM prevents tampering  
-✅ **Forward Secrecy** - Each record has unique encryption key  
-✅ **Access Control** - Time-bounded grants with automatic expiry  
-✅ **Replay Protection** - EIP-712 signatures with nonce increment  
-✅ **Prompt Injection Defense** - 3-layer AI guard (deterministic pre-check, delimited context, output validation)  
-✅ **Audit Trail** - Immutable on-chain access logs  
+- **Client-Side Encryption** - Plaintext never leaves user's browser
+- **Key Derivation** - HKDF-SHA256 from wallet signatures
+- **Authenticated Encryption** - AES-256-GCM prevents tampering
+- **Forward Secrecy** - Each record has unique encryption key
+- **Access Control** - Time-bounded grants with automatic expiry
+- **Replay Protection** - EIP-712 signatures with nonce increment
+- **Prompt Injection Defense** - 3-layer AI guard (deterministic pre-check, delimited context, output validation)
+- **Audit Trail** - Immutable on-chain access logs
 
 ### Attack Resistance (All Blocked)
 
 | Attack Vector | Defense Mechanism | Test Status |
 |--------------|-------------------|-------------|
-| Stolen CID | AES-GCM authentication | ✅ Blocked |
-| Expired Grant | Time-based contract check | ✅ Blocked |
-| Signature Replay | Nonce increment | ✅ Blocked |
-| Forged Grant | Owner-only authorization | ✅ Blocked |
-| Prompt Injection | 3-layer AI guard | ✅ Blocked |
+| Stolen CID | AES-GCM authentication | Blocked |
+| Expired Grant | Time-based contract check | Blocked |
+| Signature Replay | Nonce increment | Blocked |
+| Forged Grant | Owner-only authorization | Blocked |
+| Prompt Injection | 3-layer AI guard | Blocked |
 
 **Proof**: Run `npm run attack:all` to see all attacks fail.
 
 ---
 
-## 🔧 API Endpoints
+## API Endpoints
 
 ### Original Endpoints
 | Method | Endpoint | Description |
@@ -385,7 +387,7 @@ Medichain/
 
 ---
 
-## 🎓 Integration Example
+## Integration Example
 
 ```typescript
 import { useShieldKeys, useShieldGrants } from "@/lib/hooks";
@@ -424,7 +426,7 @@ See **[INTEGRATION.md](INTEGRATION.md)** for complete examples.
 
 ---
 
-## 📊 Project Statistics
+## Project Statistics
 
 ### Implementation
 - **Total Files Created**: 45+
@@ -448,7 +450,7 @@ See **[INTEGRATION.md](INTEGRATION.md)** for complete examples.
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Backend Won't Start
 ```bash
@@ -498,7 +500,10 @@ npm test
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
+
+### Live Demo
+- **Deployed app**: [https://medichain-main-ivory.vercel.app/](https://medichain-main-ivory.vercel.app/)
 
 ### Documentation
 - **Complete Shield Guide**: [MEDICHAIN-SHIELD-COMPLETE.md](MEDICHAIN-SHIELD-COMPLETE.md)
@@ -517,48 +522,48 @@ npm test
 
 ---
 
-## 🎯 Production Recommendations
+## Production Recommendations
 
 ### Before Deploying
-1. ✅ Audit smart contracts (OpenZeppelin or CertiK)
-2. ✅ Migrate to w3up-client for Web3.storage
-3. ✅ Add PostgreSQL/MongoDB for metadata
-4. ✅ Implement Redis for session caching
-5. ✅ Add comprehensive monitoring (Sentry, DataDog)
-6. ✅ Set up CI/CD pipeline
-7. ✅ Implement backup and disaster recovery
-8. ✅ Add HIPAA compliance measures
-9. ✅ Configure production LLM provider (Claude/GPT-4)
-10. ✅ Deploy to mainnet (Polygon PoS)
+1. Audit smart contracts (OpenZeppelin or CertiK)
+2. Migrate to w3up-client for Web3.storage
+3. Add PostgreSQL/MongoDB for metadata
+4. Implement Redis for session caching
+5. Add comprehensive monitoring (Sentry, DataDog)
+6. Set up CI/CD pipeline
+7. Implement backup and disaster recovery
+8. Add HIPAA compliance measures
+9. Configure production LLM provider (Claude/GPT-4)
+10. Deploy to mainnet (Polygon PoS)
 
 ---
 
-## 🏆 Key Achievements
+## Key Achievements
 
-✅ **Zero Visual Changes** - No component modifications  
-✅ **$0 Total Cost** - Free-tier only  
-✅ **Zero-Knowledge** - Server never sees plaintext  
-✅ **Non-Breaking** - Existing code untouched  
-✅ **Production Ready** - Comprehensive tests  
-✅ **Attack Resistant** - 5/5 attacks blocked  
-✅ **Type Safe** - Full TypeScript coverage  
-✅ **Well Documented** - Complete guides  
+- **Zero Visual Changes** - No component modifications
+- **$0 Total Cost** - Free-tier only
+- **Zero-Knowledge** - Server never sees plaintext
+- **Non-Breaking** - Existing code untouched
+- **Production Ready** - Comprehensive tests
+- **Attack Resistant** - 5/5 attacks blocked
+- **Type Safe** - Full TypeScript coverage
+- **Well Documented** - Complete guides
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This project is open source. Feel free to fork, extend, and submit PRs!
 
 ---
 
-## 📄 License
+## License
 
 MIT License - See LICENSE file for details
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built with [v0.dev](https://v0.dev) for UI components
 - Powered by [Polygon](https://polygon.technology/) for L2 scaling
@@ -569,4 +574,3 @@ MIT License - See LICENSE file for details
 ---
 
 **Ready to get started?** Run `.\start-dev.ps1` or see [MEDICHAIN-SHIELD-COMPLETE.md](MEDICHAIN-SHIELD-COMPLETE.md)
-
