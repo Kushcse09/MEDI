@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ArrowRight, Check, Clock3, Fingerprint, Menu, Plus, ShieldCheck, Upload, X } from 'lucide-react'
 import { useWallet } from '@/lib/WalletContext'
 import { useRecords } from '@/lib/useRecords'
@@ -57,8 +57,13 @@ export default function DashboardPage() {
   }
 
   // Redirect if not connected
+  useEffect(() => {
+    if (!isConnected) {
+      router.push('/')
+    }
+  }, [isConnected, router])
+
   if (!isConnected) {
-    router.push('/')
     return null
   }
 
